@@ -1,4 +1,6 @@
-from fastapi import FastAPI, Response, status, HTTPException, Depends, CORSMiddleware
+from fastapi import FastAPI, Response, status, HTTPException, Depends
+from fastapi.middleware.cors import CORSMiddleware
+
 from . import models, config
 from .database import engine
 from .routers import post, user, auth, vote
